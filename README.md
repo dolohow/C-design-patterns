@@ -1,4 +1,4 @@
-C++-design-patterns
+Design Patterns
 ===
 
 ## Description
@@ -6,8 +6,8 @@ C++-design-patterns
 This repository contains my attempt to implement design patterns and show the
 usage.
 
-Currently there are only C++ examples, but I will probably add some more in
-future. Possibly languages are:
+I will probably add some more languages examples in future. Possibly languages
+are:
 * JavaScript ES6
 * Go
 * Python
