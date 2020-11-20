@@ -14,7 +14,7 @@ Singleton        | :heavy_check_mark:
 Name      | C++                | JavaScript | Python
 --------- | ------------------ | ---------- | ------
 Adapter   | :heavy_check_mark:
-Bridge    | :x:
+Bridge    | :heavy_check_mark:
 Composite | :x:
 Decorator | :heavy_check_mark:
 Facade    | :x:
