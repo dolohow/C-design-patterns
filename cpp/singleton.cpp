@@ -4,27 +4,26 @@
 
 class Singleton {
 public:
-    static Singleton* getInstance();
+  static Singleton *getInstance();
 
 private:
-    Singleton() {};
+  Singleton(){};
 };
 
-Singleton* Singleton::getInstance() {
-    std::unique_lock<std::mutex> l;
+Singleton *Singleton::getInstance() {
+  std::unique_lock<std::mutex> l;
 
-    std::cout << "Instance" << std::endl;
+  std::cout << "Instance" << std::endl;
 
-    static Singleton instance;
+  static Singleton instance;
 
-    return &instance;
+  return &instance;
 }
 
 int main() {
-    std::thread t1 (Singleton::getInstance);
-    std::thread t2 (Singleton::getInstance);
+  std::thread t1(Singleton::getInstance);
+  std::thread t2(Singleton::getInstance);
 
-    t1.join();
-    t2.join();
+  t1.join();
+  t2.join();
 }
-
