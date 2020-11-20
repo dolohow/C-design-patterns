@@ -12,9 +12,7 @@ class OnlyWhenAuthorized : public API {
 public:
   OnlyWhenAuthorized(API &api, int key) : api{api}, key{key} {}
   bool hasAccess() {
-    if (key == 13)
-      return true;
-    return false;
+    return key == 13;
   }
   int getSecretNumber() {
     if (hasAccess()) {
