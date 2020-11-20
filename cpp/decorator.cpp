@@ -2,7 +2,6 @@
 
 class Cake {
 public:
-  Cake() {}
   virtual uint getCost() { return 100; }
   virtual std::string getDescription() { return "Cake"; }
 };
@@ -12,9 +11,11 @@ class CakeOptions : public Cake {
   std::string description;
   uint cost;
 
-public:
+protected:
   CakeOptions(Cake &cake, std::string description, uint cost)
       : cake{cake}, description{description}, cost{cost} {}
+
+public:
   virtual std::string getDescription() {
     return cake.getDescription() + " " + description;
   }
@@ -34,7 +35,7 @@ public:
 int main() {
   Cake cake;
   std::cout << cake.getCost() << std::endl;
-
+  
   WhippedCream cream(cake);
   std::cout << cream.getDescription() << " " << cream.getCost() << std::endl;
 
