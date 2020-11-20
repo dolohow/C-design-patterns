@@ -1,16 +1,13 @@
-g++ = g++ -std=c++11
-rm = rm -rf
+CC=g++ -std=c++20
+CFLAGS=-Wall -pthread
 
-all: prepare singleton adapter
+SRCS=$(wildcard *.cpp)
+OBJS=${SRCS:.cpp=}
+
+all: $(OBJS)
+
+$(OBJS):
+	$(CC) $(CFLAGS) $@.cpp -o $@
 
 clean:
-	$(rm) build
-
-prepare:
-	mkdir -p build
-
-singleton:
-	$(g++) -pthread singleton.cpp -o build/singleton
-adapter:
-	$(g++) adapter.cpp -o adapter -o build/adapter
-
+	rm -rf $(OBJS)
