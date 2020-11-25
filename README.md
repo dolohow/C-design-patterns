@@ -17,7 +17,7 @@ Adapter   | :heavy_check_mark:
 Bridge    | :heavy_check_mark:
 Composite | :x:
 Decorator | :heavy_check_mark:
-Facade    | :x:
+Facade    | :heavy_check_mark:
 Flyweight | :x:
 Proxy     | :heavy_check_mark:
 
